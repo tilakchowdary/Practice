@@ -2,19 +2,10 @@
 # -*- coding: utf-8 -*-
 import socket
 import collections
-from socket import AF_INET, SOCK_STREAM, SOCK_DGRAM
 
 import psutil
 
 AD = '-'
-AF_INET6 = getattr(socket, 'AF_INET6', object())
-proto_map = {
-    (AF_INET, SOCK_STREAM): 'tcp',
-    (AF_INET6, SOCK_STREAM): 'tcp6',
-    (AF_INET, SOCK_DGRAM): 'udp',
-    (AF_INET6, SOCK_DGRAM): 'udp6',
-    }
-
 
 def main():
     pid_num_of_connections_map = {}
